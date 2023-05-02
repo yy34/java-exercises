@@ -1,12 +1,14 @@
-package com.example.todoapp.entity;
+package com.example.todoapp.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
 public class User {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,14 +20,4 @@ public class User {
     @OneToMany
     private List<Todo> todoList = new ArrayList<>();
 
-    public User(Long id, String userName, String password, List<Todo> todoList) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.todoList = todoList;
-    }
-
-    public User() {
-
-    }
 }

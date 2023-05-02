@@ -1,9 +1,11 @@
-package com.example.todoapp.entity;
+package com.example.todoapp.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 @Entity
+@Data
 public class Todo {
     @Id
     private Long id;
