@@ -17,7 +17,7 @@ public class User {
     private String userName;
     private String password;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Todo> todoList = new ArrayList<>();
 
 }
